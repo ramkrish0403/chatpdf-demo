@@ -18,9 +18,7 @@
 	},
 	"dependencies": {
 		"dotenv": "^16.3.1",
-		"llamaindex": "^0.0.0-20231018030303",
-		"openai": "^4.12.4",
-		"pdfreader": "^3.0.2"
+		"llamaindex": "^0.0.0-20231018030303"
 	},
 	"devDependencies": {
 		"@types/node": "^20.2.3",
