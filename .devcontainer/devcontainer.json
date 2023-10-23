@@ -13,7 +13,8 @@
 			"extensions": [
 				"esbenp.prettier-vscode",
 				"dbaeumer.vscode-eslint",
-                "github.copilot"
+                "github.copilot",
+				"tomoki1207.pdf"
 			]
 		}
 	}

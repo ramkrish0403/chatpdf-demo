@@ -15,5 +15,5 @@ if (!env.OPENAI_API_KEY) {
 	throw new Error('OPENAI_AUTH_KEY is required');
 }
 
-delete process.env.OPENAI_API_KEY;
+// delete process.env.OPENAI_API_KEY;
 export default env;
