@@ -1,0 +1,1 @@
+Copy knowledge base data files to this folder. llamaindex will automatically index them.
