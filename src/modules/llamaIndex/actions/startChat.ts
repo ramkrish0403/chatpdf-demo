@@ -4,6 +4,7 @@ import ENV from '../../../environment';
 
 export default async function startChatFromIndex(index: VectorStoreIndex) {
 	const retriever = index.asRetriever();
+	retriever.similarityTopK = 4; // default is 2
 	const chatModel = new OpenAI({
 		model: 'gpt-3.5-turbo',
 		apiKey: ENV.OPENAI_API_KEY,
