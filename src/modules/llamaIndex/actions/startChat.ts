@@ -11,7 +11,12 @@ export default async function startChatFromIndex(index: VectorStoreIndex) {
 	const chatEngine = new ContextChatEngine({ retriever, chatModel });
 
 	// Start chatting with the chat engine
-	console.log('Bot: Hello! I am a OPENAI. Ask me anything!');
+	console.log(
+		'\x1b[32m%s\x1b[0m',
+		'Bot: ',
+		'Hello! I am OPENAI Bot. Ask me anything!',
+	);
+
 	while (true) {
 		// Ask the user for a message on the command line
 		const rl = readline.createInterface({
@@ -21,7 +26,7 @@ export default async function startChatFromIndex(index: VectorStoreIndex) {
 
 		// Use a Promise to wait for user input
 		const userInputPromise = new Promise<string>((resolve) => {
-			rl.question('User: ', (input: string) => {
+			rl.question('\x1b[31mUser:\x1b[0m ', (input: string) => {
 				resolve(input);
 				rl.close();
 			});
@@ -31,6 +36,6 @@ export default async function startChatFromIndex(index: VectorStoreIndex) {
 
 		const response = await chatEngine.chat(userInput);
 		// Handle and display the response
-		console.log(`Bot: ${response}`, "\n");
+		console.log('\x1b[32m%s\x1b[0m', 'Bot: ', `${response}`, "\n");
 	}
 }
